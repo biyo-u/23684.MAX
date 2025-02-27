@@ -22,7 +22,7 @@ public class TeleOp extends OpMode {
 	@Override
 	public void loop() {
 		// Drive the robot with the game-pad
-		robot.drive.driveMecanumFieldCentric(-gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_x, robot.odometry.getPosition().getHeading(AngleUnit.DEGREES));
+		robot.drive.driveMecanumRobotCentric(-gamepad1.left_stick_y, gamepad1.left_stick_x, gamepad1.right_stick_x);
 
 		// Reset IMU for Field Centric
 		if (gamepad1.left_bumper) {
